@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">TecoNoteApp</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create account</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_account">Already have account..</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_valid_email">Please enter valid email address</string>
+    <string name="enter_valid_passowrd">Password must be 8 character long, including alphabets and numbers without space</string>
+    <string name="enter_conf_password">Please enter confirm password</string>
+    <string name="confirm_password_must_be_same">Confime password must be same as password</string>
+    <string name="enter_email">Please enter email address</string>
+    <string name="enter_password">Please enter passord</string>
+    <string name="enter_user_name">Please enter name</string>
+    <string name="show_password">Show Password</string>
+    <string name="title">Title</string>
+    <string name="note_description">Note Description</string>
+    <string name="new_note">New Note</string>
+    <string name="save_note">Save Note</string>
+
+    <string name="transition_title">title</string>
+    <string name="transition_desc">desc</string>
+    <string name="transition_fab">fab</string>
+    <string name="opps">Opps!</string>
+    <string name="no_notes_desc">No notes found. please create note and getting better note app experience</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="enter_note_title">Please enter note title</string>
+    <string name="delete_note">Delete note</string>
+</resources>
