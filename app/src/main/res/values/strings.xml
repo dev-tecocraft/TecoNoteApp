@@ -12,9 +12,9 @@
     <string name="enter_valid_email">Please enter valid email address</string>
     <string name="enter_valid_passowrd">Password must be 8 character long, including alphabets and numbers without space</string>
     <string name="enter_conf_password">Please enter confirm password</string>
-    <string name="confirm_password_must_be_same">Confime password must be same as password</string>
+    <string name="confirm_password_must_be_same">Confirm password must be same as password</string>
     <string name="enter_email">Please enter email address</string>
-    <string name="enter_password">Please enter passord</string>
+    <string name="enter_password">Please enter password</string>
     <string name="enter_user_name">Please enter name</string>
     <string name="show_password">Show Password</string>
     <string name="title">Title</string>
