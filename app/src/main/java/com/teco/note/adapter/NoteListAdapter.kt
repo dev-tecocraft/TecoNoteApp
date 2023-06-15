@@ -66,6 +66,10 @@ class NoteListAdapter(private val onNoteClick: (NoteModel, ItemListNoteBinding) 
         }catch (_: Exception){}
     }
 
+    fun allNotesRemoved(isAllNoteRemoved: (Boolean) -> Unit) {
+        isAllNoteRemoved(notes.isEmpty())
+    }
+
     inner class NoteListViewHolder(
         private val binding: ItemListNoteBinding
     ) : ViewHolder(binding.root) {

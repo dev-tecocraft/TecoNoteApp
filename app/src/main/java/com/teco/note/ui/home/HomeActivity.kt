@@ -42,9 +42,13 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(ActivityHomeBinding::infl
                     } else {
                         intent.getParcelableExtra(KEY_NOTE_MODEL)
                     }
-
                     noteModel?.let {
                         noteListAdapter.addNote(it)
+                        noteListAdapter.allNotesRemoved { isAllNotesRemoved ->
+                            if (!isAllNotesRemoved) {
+                                binding.llNoNotes.isVisible = false
+                            }
+                        }
                     }
                 }
             }
@@ -52,7 +56,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(ActivityHomeBinding::infl
 
     private var updateNoteLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { activityResult ->
-            if(activityResult.resultCode == KEY_CODE_NOTE_UPDATED){
+            if (activityResult.resultCode == KEY_CODE_NOTE_UPDATED) {
                 activityResult.data?.let { intent ->
                     val noteModel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                         intent.getParcelableExtra(KEY_NOTE_MODEL, NoteModel::class.java)
@@ -64,7 +68,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(ActivityHomeBinding::infl
                         noteListAdapter.updateNote(it)
                     }
                 }
-            }else if(activityResult.resultCode == KEY_CODE_NOTE_DELETED){
+            } else if (activityResult.resultCode == KEY_CODE_NOTE_DELETED) {
                 activityResult.data?.let { intent ->
                     val noteModel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                         intent.getParcelableExtra(KEY_NOTE_MODEL, NoteModel::class.java)
@@ -74,6 +78,11 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(ActivityHomeBinding::infl
 
                     noteModel?.let {
                         noteListAdapter.removeNote(it)
+                        noteListAdapter.allNotesRemoved { isAllNotesRemoved ->
+                            if (isAllNotesRemoved) {
+                                initNoNotesView()
+                            }
+                        }
                     }
                 }
             }
@@ -150,8 +159,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(ActivityHomeBinding::infl
             message = "Are you sure want to logout?",
             positiveButtonTitle = "Logout",
             negativeButtonTitle = "Cancel"
-        ){ isPositiveButtonClick ->
-            if(isPositiveButtonClick){
+        ) { isPositiveButtonClick ->
+            if (isPositiveButtonClick) {
                 viewModel.logout()
                 navigateToLoginScreen()
             }
