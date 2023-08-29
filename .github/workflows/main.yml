@@ -1,1 +1,12 @@
-
+name: CI
+on:
+  push:
+    branches: [feat_ci_cd]
+  workflow_dispatch:
+jobs:
+  build :
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run test script
+        run: echo Hello TecoNote
