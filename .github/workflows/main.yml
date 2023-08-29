@@ -42,6 +42,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set Up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+
       - name: Build gradle project
         run: ./gradlew build
 
@@ -50,6 +60,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Set Up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
 
       - name: Build Debug APK
         run:  ./gradlew assembleDebug
@@ -67,6 +87,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set Up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+
       - name: Build Release APK
         run:  ./gradlew assemble
 
@@ -82,8 +112,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set Up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+
       - name: Create Bundle
         run:  ./gradlew app:bundleRelease
+
       - name: Upload AAB (App Bundle) Release - ${{ env.repository_name }}
         uses: actions/upload-artifact@v3
         with:
