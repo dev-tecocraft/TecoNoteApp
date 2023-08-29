@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "345349671490",
+    "project_id": "teco-note-app",
+    "storage_bucket": "teco-note-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345349671490:android:83360d28355e6d934cbbdb",
+        "android_client_info": {
+          "package_name": "com.teco.note"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345349671490-3brdmhaso1h52hhbh72lkeqbtscn15ic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teco.note",
+            "certificate_hash": "ca2b160e92177d724145d07d589ac37dd001db91"
+          }
+        },
+        {
+          "client_id": "345349671490-idorfdfivqgvmg0agimioup7rs642q87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtIcBNSUAR6nyRD0q9pb0P1linhu_ELDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345349671490-idorfdfivqgvmg0agimioup7rs642q87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
