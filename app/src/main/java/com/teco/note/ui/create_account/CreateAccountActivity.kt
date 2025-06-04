@@ -41,7 +41,7 @@ class CreateAccountActivity :
                     }
 
                     CreateAccountViewModel.CreateAccountUIStates.InvalidPassword -> {
-                        binding.tilPassword.error = getString(R.string.enter_valid_passowrd)
+                        binding.tilPassword.error = getString(R.string.enter_valid_password)
                     }
 
                     CreateAccountViewModel.CreateAccountUIStates.Loading -> {
