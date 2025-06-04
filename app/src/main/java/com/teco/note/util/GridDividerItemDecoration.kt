@@ -21,7 +21,7 @@ class GridDividerItemDecoration(private val spacing: Int) : RecyclerView.ItemDec
         outRect.top = if (isInTheFirstRow(position, totalSpanCount)) 0 else spacing
         outRect.left = if (isFirstInRow(position, totalSpanCount, spanSize)) spacing / 4 else spacing / 2
         outRect.right = if (isLastInRow(position, totalSpanCount, spanSize)) spacing / 4 else spacing / 2
-        outRect.bottom = if (isLastInRow(position, totalSpanCount, spanSize)) spanSize else 0
+        outRect.bottom = if (isLastInRow(position, totalSpanCount, spanSize)) spacing else 0
     }
 
     private fun isInTheFirstRow(position: Int, totalSpanCount: Int): Boolean =
