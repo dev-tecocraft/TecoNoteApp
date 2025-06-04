@@ -10,7 +10,7 @@
     <string name="already_have_account">Already have account..</string>
     <string name="sign_up">Sign Up</string>
     <string name="enter_valid_email">Please enter valid email address</string>
-    <string name="enter_valid_passowrd">Password must be 8 character long, including alphabets and numbers without space</string>
+    <string name="enter_valid_password">Password must be at least 8 characters long, including letters and numbers with no spaces.</string>
     <string name="enter_conf_password">Please enter confirm password</string>
     <string name="confirm_password_must_be_same">Confirm password must be same as password</string>
     <string name="enter_email">Please enter email address</string>
